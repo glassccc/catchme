@@ -14,12 +14,11 @@ function App() {
   }, [])
 
   const handleCheckIn = () => {
-    const code = window.prompt(`체크인은 현장 스탭이 진행합니다.\n인증 코드를 입력해주세요:`)
+    const code = window.prompt(`체크인은 현장 스탭이 진행합니다.\n인증 코드를 입력해주세요.`)
     if (code !== '0712') {
       alert('인증 코드가 올바르지 않습니다.')
       return
     }
-  
     setCheckedIn(true)
     localStorage.setItem('checkedIn', 'true')
   
